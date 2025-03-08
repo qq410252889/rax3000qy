@@ -109,6 +109,8 @@ jobs:
         cd openwrt
         rm -rf feeds/packages/lang/golang
         git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+        cd feeds/packages/lang/golang
+        git checkout 3bb7214b2d1137d58f8103b37d1eae822df7c0df
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
